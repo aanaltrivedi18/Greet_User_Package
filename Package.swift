@@ -16,8 +16,10 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Greet_User_Package"),
-        .testTarget(
-            name: "Greet_User_PackageTests",
-            dependencies: ["Greet_User_Package"]),
+        
+        .binaryTarget(
+            name: "Greet_User",
+            path: "./Sources/Greet_User.xcframework"
+        )
     ]
 )
